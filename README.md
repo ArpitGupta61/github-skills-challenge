@@ -64,5 +64,11 @@ Second, the producer and consumer were using different topic objects, so the con
 After the fixes, the pipeline processed 10 records, detected 2 anomalies, and consumed 2 events successfully.
 ---
 
+## Task 6: End-to-End Pipeline
+
+I ran the complete AIOps workflow from the operational data through anomaly detection, event creation, producer, topic, consumer, and final output.
+
+The pipeline processed 10 records, detected 2 anomalies, and consumed 2 events. The final output showed the payment timeout at `10:05` and the database timeout at `10:06`, including the reasons why they were flagged.
+
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
