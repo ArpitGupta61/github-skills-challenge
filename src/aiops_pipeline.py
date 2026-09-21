@@ -15,7 +15,7 @@ def run_pipeline(file_path):
     data = load_data(file_path)
 
     # INTENTIONAL ASSESSMENT ISSUE #2
-    producer_topic = EventTopic("service-events")
+    producer_topic = EventTopic("anomaly-events")
 
     detector = AnomalyDetector()
     producer = EventProducer(producer_topic)
