@@ -78,5 +78,9 @@ The pipeline processed 10 records, detected 2 anomalies, and consumed 2 events. 
 ```bash
 PYTHONPATH=src python aiops_pipeline.py
 
+## Task 8: Validation
+
+The provided tests passed with 8 tests passing. The full pipeline also completed successfully. It processed 10 records, detected 2 anomalies, and consumed 2 events.
+
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
