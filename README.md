@@ -52,6 +52,16 @@ One limitation is that the detector uses fixed thresholds and may not adapt to c
 The event flow is: detector -> event -> producer -> topic -> consumer -> AIOps result.
 
 No normal records were flagged, and no expected anomalies were missed.
+
+## Task 5: Workflow Fixes
+
+I found two problems in the provided workflow.
+
+First, the anomaly detector only checked for `WARNING` logs, but the data contained `ERROR` logs. I updated the detector to recognise both levels.
+
+Second, the producer and consumer were using different topic objects, so the consumer received no events. I connected both components to the same anomaly topic.
+
+After the fixes, the pipeline processed 10 records, detected 2 anomalies, and consumed 2 events successfully.
 ---
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
