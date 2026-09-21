@@ -40,6 +40,18 @@ Two anomalies were detected:
 The detector was updated to recognise `ERROR` logs, and the pipeline was updated so the producer and consumer use the same topic. The pipeline processed 10 records, detected 2 anomalies, and consumed 2 events.
 
 One limitation is that the detector uses fixed thresholds and may not adapt to changing traffic levels.
+
+## What I completed
+
+- Looked through the service data and the main AIOps files.
+- Checked the normal records and found the two unusual records.
+- Fixed the detector so it also notices `ERROR` logs.
+- Fixed the event flow so the producer and consumer use the same topic.
+- Ran the pipeline: 10 records were checked, 2 anomalies were found, and 2 events were received.
+
+The event flow is: detector -> event -> producer -> topic -> consumer -> AIOps result.
+
+No normal records were flagged, and no expected anomalies were missed.
 ---
 
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
